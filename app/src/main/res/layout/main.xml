@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    >
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/table_header_bluetooth"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textStyle="bold"
+            />
+
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            >
+
+        <TableRow>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="@string/table_row_state"
+                    />
+            <TextView
+                    android:id="@+id/textViewState"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value_na"
+                    />
+        </TableRow>
+        <TableRow>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="@string/table_row_target"
+                    />
+            <TextView
+                    android:id="@+id/textViewTarget"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value_na"
+                    />
+        </TableRow>
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/messagem"
+            android:padding="5pt"
+            android:hint="Enviar mensagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/send" />
+
+        <ImageButton
+            android:id="@+id/send"
+            android:src="@android:drawable/ic_menu_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="send"
+            android:contentDescription="@null" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+
